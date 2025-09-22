@@ -2,9 +2,46 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Protocolo de Uso do Liofilizador - DFP</title>
+  <title>Liofilizador - DFP</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <style>
     /* ===== Estilo padrão (light mode) ===== */
+    .logo{
+        width: 275px;
+        height: auto;
+    }
+
+    /* Por padrão, tema claro*/
+    .logo-escuro {
+        display: none;
+    }
+
+    /*Modo escuro automático*/
+    @media (prefers-color-scheme: dark) {
+        .logo-claro {
+            display: none;
+        }
+        .logo-escuro {
+            display: inline-block;
+        }
+    }
+
+    /* Botão manual: força claro*/
+    body.manual-light .logo-claro {
+        display: inline-block;
+    }
+    body.manual-light .logo-escuro {
+        display: none;
+    }
+
+    /* Botão manual: força escuro*/
+    body.manual-dark .logo-claro {
+        display: none;
+    }
+    body.manual-dark .logo-escuro {
+        display: inline-block;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
@@ -89,6 +126,11 @@
 
     ol {
       padding-left: 20px;
+    }
+
+    ol li {
+      margin-bottom: 15px;
+      line-height: 1.6;
     }
 
     ul {
@@ -194,14 +236,60 @@
     body.manual-dark footer {
       color: #aaa !important;
     }
+
+    .footer-logo {
+    width: 20px;      /* tamanho padrão */
+    height: auto;     
+    vertical-align: middle;
+    margin-left: 5px;
+    }
+
+    /* Default (tema claro) */
+    .footer-github-escuro,
+    .footer-linkedin-escuro {
+    display: none;
+    }
+
+    /* Dark mode automático */
+    @media (prefers-color-scheme: dark) {
+    .footer-github-claro,
+    .footer-linkedin-claro {
+        display: none;
+    }
+    .footer-github-escuro,
+    .footer-linkedin-escuro {
+        display: inline-block;
+    }
+    }
+
+    /* Botão manual: modo claro */
+    body.manual-light .footer-github-claro,
+    body.manual-light .footer-linkedin-claro {
+    display: inline-block;
+    }
+    body.manual-light .footer-github-escuro,
+    body.manual-light .footer-linkedin-escuro {
+    display: none;
+    }
+
+    /* Botão manual: modo escuro */
+    body.manual-dark .footer-github-claro,
+    body.manual-dark .footer-linkedin-claro {
+    display: none;
+    }
+    body.manual-dark .footer-github-escuro,
+    body.manual-dark .footer-linkedin-escuro {
+    display: inline-block;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo-ufv.png" alt="Logotipo UFV">
+    <img src="images/logo_ufv_lm.png" alt="Logotipo UFV" class="logo logo-claro">
+    <img src="images/logo_ufv_dm.png" alt="Logotipo UFV" class="logo logo-escuro">
     <button class="theme-toggle" id="themeToggle">🌙 Alternar Tema</button>
-    <img src="logo-dfp.png" alt="Logotipo Departamento de Fitopatologia">
+    <img src="images/logo_dfp.png" alt="Logotipo Departamento de Fitopatologia">
   </header>
 
   <h1>Protocolo de Utilização do Liofilizador</h1>
@@ -211,20 +299,106 @@
     <p>
       Para utilização do liofilizador do Departamento de Fitopatologia, favor seguir o seguinte protocolo:
     </p>
-    <p>
-      Adicione a <strong>Agenda do DFP</strong> ao seu Google Calendar a partir do seguinte link:<br>
-      <a href="URL_DA_AGENDA" target="_blank">Agenda Liofilizador</a>
-    </p>
-    <p>
-      Aqui você poderá ver quem está agendado e, com pelo menos 15 dias de antecedência, os períodos em que não haverá atendimento.
-    </p>
+    <section>
+    <ol>
+        <li>
+            Adicione a <strong>Agenda do DFP</strong> ao seu Google Calendar a partir do seguinte link:<br>
+            <a href="https://calendar.google.com/calendar/u/1?cid=Y183Njk4NTY2OWFhZmFiOTA2M2ZjYmU4NjQyOThhYjE4ZDFlOTNjY2FiYzIwNmFiZDY1ODA5MDkxODgyYTdjNDg2QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank">Agenda Liofilizador</a>
+            <p>
+              Aqui você poderá ver quem está agendado e, com pelo menos 15 dias de antecedência, os períodos em que não haverá atendimento (feriados, férias, etc.).
+            </p>
+        </li>
+    </ol>
   </section>
 
-  <!-- (mantém a tabela e lista igual ao anterior) -->
+    <ol start="2">
+      <li>Entrar em contato com o servidor <strong>César Macedo de Oliveira</strong> via e-mail 
+      (<a href="mailto:cesar.macedo@ufv.br">cesar.macedo@ufv.br</a>) com antecedência mínima de 48 horas, observando atentamente os horários disponíveis (Tabela abaixo).</li>
+    </ol>
+
+    <h2>Horários Disponíveis 2025-2</h2>
+    <table class="tabela-horarios">
+      <tr>
+        <th>Horário</th>
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">08:00 - 09:00</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">09:00 - 10:00</td>
+        <td class="highlight">Atendimento</td><td></td><td class="highlight">Atendimento</td><td class="highlight">Atendimento</td><td class="highlight">Atendimento</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">10:00 - 11:00</td>
+        <td class="highlight">Atendimento</td><td class="highlight">Atendimento</td><td class="highlight">Atendimento</td><td></td><td class="highlight">Atendimento</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">11:00 - 12:00</td>
+        <td></td><td class="highlight">Atendimento</td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">14:00 - 15:00</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">15:00 - 16:00</td>
+        <td class="highlight">Atendimento</td><td></td><td class="highlight">Atendimento</td><td></td><td class="highlight">Atendimento</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">16:00 - 16:30</td>
+        <td></td><td class="highlight">Atendimento</td><td></td><td class="highlight">Atendimento</td><td></td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <ol start="3">
+      <li>O e-mail deve ser copiado para a Chefia do Departamento de Fitopatologia (<a href="mailto:chefiadfp@ufv.br">chefiadfp@ufv.br</a>).</li>
+      <li>Não enviar e-mail fora do horário de trabalho nem em finais de semana.</li>
+      <li>As amostras <strong>NÃO</strong> poderão ficar no liofilizador no final de semana (sábado e domingo).</li>
+      <li>No e-mail a ser enviado, favor informar:
+        <ul>
+          <li>o tipo de amostra a ser utilizada;</li>
+          <li>a disposição das amostras (tubos, placas, microtubos etc.);</li>
+          <li>a quantidade de amostras;</li>
+          <li>o período de utilização do liofilizador.</li>
+        </ul>
+      </li>
+      <li>Informações básicas:
+        <ul>
+          <li>as amostras devem estar isentas de solventes orgânicos;</li>
+          <li>as amostras devem estar congeladas (preferencialmente -80 °C);</li>
+          <li>recipientes devem estar semiabertos ou cobertos com plástico filme perfurado (dispensável para folhas vegetais);</li>
+          <li>o estudante é responsável por manter a amostra congelada até o momento da liofilização.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
 
   <footer>
-    Departamento de Fitopatologia - Universidade Federal de Viçosa
-  </footer>
+  <p>Departamento de Fitopatologia - Universidade Federal de Viçosa</p>
+  <p style="font-size: 0.8em; color: #888;">
+    Desenvolvido por César Macedo de Oliveira |
+    
+    <!-- GitHub -->
+    <a href="https://github.com/CesarMacOliv" target="_blank">
+      <img src="images/github-mark.png" alt="GitHub" class="footer-logo footer-github-claro">
+      <img src="images/github-mark-white.png" alt="GitHub" class="footer-logo footer-github-escuro">
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/cesar-macedo-chemist/" target="_blank">
+      <img src="images/InBug-Black.png" alt="LinkedIn" class="footer-logo footer-linkedin-claro">
+      <img src="images/InBug-White.png" alt="LinkedIn" class="footer-logo footer-linkedin-escuro">
+    </a>
+  </p>
+</footer>
 
   <script>
     const toggleBtn = document.getElementById("themeToggle");
