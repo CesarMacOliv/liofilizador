@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Protocolo de Uso do Liofilizador - DFP</title>
+  <style>
+    /* ===== Estilo padrão (light mode) ===== */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    .theme-toggle {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #005a2e;
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background: #007d44;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+      color: #005a2e;
+    }
+
+    a {
+      color: #005a2e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .tabela-horarios {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+      background: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .tabela-horarios th, .tabela-horarios td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .tabela-horarios th {
+      background-color: #e3f2e8;
+      font-weight: bold;
+    }
+
+    .highlight {
+      background-color: #d6f5d6;
+      font-weight: bold;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #555;
+    }
+
+    /* ===== Dark Mode automático ===== */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+
+      h1 {
+        color: #7cdba5;
+      }
+
+      a {
+        color: #7cdba5;
+      }
+
+      .tabela-horarios {
+        background: #1e1e1e;
+      }
+
+      .tabela-horarios th, .tabela-horarios td {
+        border: 1px solid #444;
+      }
+
+      .tabela-horarios th {
+        background-color: #2a3d34;
+        color: #e0e0e0;
+      }
+
+      .highlight {
+        background-color: #264d3b;
+        color: #c8f5d6;
+      }
+
+      footer {
+        color: #aaa;
+      }
+
+      .theme-toggle {
+        background: #7cdba5;
+        color: #000;
+      }
+
+      .theme-toggle:hover {
+        background: #a0f0c8;
+      }
+    }
+
+    /* ===== Forçar modo claro ===== */
+    body.manual-light {
+      background: #f9f9f9 !important;
+      color: #333 !important;
+    }
+    body.manual-light h1,
+    body.manual-light a {
+      color: #005a2e !important;
+    }
+    body.manual-light .tabela-horarios {
+      background: #fff !important;
+    }
+    body.manual-light .tabela-horarios th {
+      background: #e3f2e8 !important;
+      color: #333 !important;
+    }
+    body.manual-light .highlight {
+      background: #d6f5d6 !important;
+      color: #000 !important;
+    }
+
+    /* ===== Forçar modo escuro ===== */
+    body.manual-dark {
+      background: #121212 !important;
+      color: #e0e0e0 !important;
+    }
+    body.manual-dark h1,
+    body.manual-dark a {
+      color: #7cdba5 !important;
+    }
+    body.manual-dark .tabela-horarios {
+      background: #1e1e1e !important;
+    }
+    body.manual-dark .tabela-horarios th {
+      background: #2a3d34 !important;
+      color: #e0e0e0 !important;
+    }
+    body.manual-dark .highlight {
+      background: #264d3b !important;
+      color: #c8f5d6 !important;
+    }
+    body.manual-dark footer {
+      color: #aaa !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo-ufv.png" alt="Logotipo UFV">
+    <button class="theme-toggle" id="themeToggle">🌙 Alternar Tema</button>
+    <img src="logo-dfp.png" alt="Logotipo Departamento de Fitopatologia">
+  </header>
+
+  <h1>Protocolo de Utilização do Liofilizador</h1>
+
+  <section>
+    <p><strong>Prezado(a) Estudante</strong></p>
+    <p>
+      Para utilização do liofilizador do Departamento de Fitopatologia, favor seguir o seguinte protocolo:
+    </p>
+    <p>
+      Adicione a <strong>Agenda do DFP</strong> ao seu Google Calendar a partir do seguinte link:<br>
+      <a href="URL_DA_AGENDA" target="_blank">Agenda Liofilizador</a>
+    </p>
+    <p>
+      Aqui você poderá ver quem está agendado e, com pelo menos 15 dias de antecedência, os períodos em que não haverá atendimento.
+    </p>
+  </section>
+
+  <!-- (mantém a tabela e lista igual ao anterior) -->
+
+  <footer>
+    Departamento de Fitopatologia - Universidade Federal de Viçosa
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("themeToggle");
+    const body = document.body;
+
+    // Verifica preferência salva
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      body.classList.add("manual-dark");
+      toggleBtn.textContent = "☀️ Alternar Tema";
+    } else if (savedTheme === "light") {
+      body.classList.add("manual-light");
+      toggleBtn.textContent = "🌙 Alternar Tema";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      if (body.classList.contains("manual-dark")) {
+        body.classList.remove("manual-dark");
+        body.classList.add("manual-light");
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙 Alternar Tema";
+      } else if (body.classList.contains("manual-light")) {
+        body.classList.remove("manual-light");
+        body.classList.add("manual-dark");
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️ Alternar Tema";
+      } else {
+        // Se ainda não escolheu, aplica dark como primeiro clique
+        body.classList.add("manual-dark");
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️ Alternar Tema";
+      }
+    });
+  </script>
+</body>
+</html>
